@@ -1,0 +1,20 @@
+(ersepsistriage => !(<X>ertriage)) && <G>(ersepsistriage => !(<X>ertriage))
+<G>((!erregistration) || <X>(<G>(!erregistration)))
+(<F>(erregistration) => <F>ertriage) && (<F>(ertriage) => <F>erregistration)
+((ersepsistriage||<F>ersepsistriage) => <F>erregistration)
+<G>((!ertriage) || <X>(<G>(!ertriage)))
+ersepsistriage || <F>ersepsistriage
+((erregistration||<F>erregistration) => <F>ersepsistriage)
+((leucocytes||<F>leucocytes) => <F>ertriage)
+((leucocytes||<F>leucocytes) => <F>erregistration)
+((ertriage||<F>ertriage) => <F>ersepsistriage)
+(ertriage => !(<X>erregistration)) && <G>(ertriage => !(<X>erregistration))
+<G>((!ersepsistriage) || <X>(<G>(!ersepsistriage)))
+((ersepsistriage||<F>ersepsistriage) => <F>ertriage)
+(erregistration => !(<X>ersepsistriage)) && <G>(erregistration => !(<X>ersepsistriage))
+((leucocytes||<F>leucocytes) => <F>ersepsistriage)
+ertriage || <F>ertriage
+erregistration || <F>erregistration
+(ersepsistriage => !(<X>erregistration)) && <G>(ersepsistriage => !(<X>erregistration))
+(<F>(ertriage) => <F>erregistration) && (<F>(erregistration) => <F>ertriage)
+<G>(!ersepsistriage)

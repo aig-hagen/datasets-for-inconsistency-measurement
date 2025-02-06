@@ -1,0 +1,14 @@
+((vendorcreatesinvoice||<F>vendorcreatesinvoice) => <F>createpurchaseorderitem)
+((vendorcreatesinvoice||<F>vendorcreatesinvoice) => <F>recordgoodsreceipt)
+(<F>(recordgoodsreceipt) => ((!recordgoodsreceipt) <U> createpurchaseorderitem))
+(<F>(recordinvoicereceipt) => ((!recordinvoicereceipt) <U> createpurchaseorderitem))
+<G>((!recordgoodsreceipt) || <X>(<G>(!recordgoodsreceipt)))
+<G>((!createpurchaseorderitem) || <X>(<G>(!createpurchaseorderitem)))
+(vendorcreatesinvoice => !(<X>createpurchaseorderitem)) && <G>(vendorcreatesinvoice => !(<X>createpurchaseorderitem))
+(createpurchaseorderitem => <X>((!createpurchaseorderitem)<U>recordgoodsreceipt)) && <G>(createpurchaseorderitem => <X>((!createpurchaseorderitem)<U>recordgoodsreceipt))
+createpurchaseorderitem || <F>createpurchaseorderitem
+(recordgoodsreceipt => !(<F>createpurchaseorderitem)) && <G>(recordgoodsreceipt => !(<F>createpurchaseorderitem))
+(createpurchaseorderitem => !(<X>recordinvoicereceipt)) && <G>(createpurchaseorderitem => !(<X>recordinvoicereceipt))
+((recordinvoicereceipt||<F>recordinvoicereceipt) => <F>recordgoodsreceipt)
+(recordinvoicereceipt => !(<F>createpurchaseorderitem)) && <G>(recordinvoicereceipt => !(<F>createpurchaseorderitem))
+recordgoodsreceipt || <F>recordgoodsreceipt

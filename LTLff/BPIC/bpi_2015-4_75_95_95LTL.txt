@@ -1,0 +1,18 @@
+((a01hoofd020||<F>a01hoofd020) => <F>a01hoofd010)
+((a01hoofd010||<F>a01hoofd010) => <F>a01hoofd020)
+<G>(!a01hoofd010 || <X>(<G>(!a01hoofd010)))
+a01hoofd015 || <F>a01hoofd015
+<G>(!a01hoofd020 || <X>(<G>(!a01hoofd020)))
+(a01hoofd015 => !(<X>a01hoofd010)) && <G>(a01hoofd015 => !(<X>a01hoofd010))
+((a01hoofd010||<F>a01hoofd010) => <F>a01hoofd015)
+((a01hoofd020||<F>a01hoofd020) => <F>a01hoofd015)
+((a01hoofd0651||<F>a01hoofd0651) => <F>a01hoofd010)
+a01hoofd010 || <F>a01hoofd010
+(a01hoofd010 => !(<X>a01hoofd020)) && <G>(a01hoofd010 => !(<X>a01hoofd020))
+<G>(!a01hoofd015 || <X>(<G>(!a01hoofd015)))
+a01hoofd020 || <F>a01hoofd020
+(a01hoofd020 => !(<X>a01hoofd010)) && <G>(a01hoofd020 => !(<X>a01hoofd010))
+(a01hoofd020 => !(<X>a01hoofd015)) && <G>(a01hoofd020 => !(<X>a01hoofd015))
+((a01hoofd015||<F>a01hoofd015) => <F>a01hoofd020)
+((a01hoofd015||<F>a01hoofd015) => <F>a01hoofd010)
+<G>(!a01hoofd020)

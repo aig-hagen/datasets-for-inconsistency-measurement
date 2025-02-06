@@ -1,0 +1,6 @@
+(<F>apartlysubmitted)
+(<G>(asubmitted => !(<F>abpartlysubmitted)))
+(<G>(asubmitted => <X>abpartlysubmitted))
+(<F>abpartlysubmitted && <F>asubmitted)
+(apartlysubmitted && <X>(!(<F>apartlysubmitted)))
+asubmitted

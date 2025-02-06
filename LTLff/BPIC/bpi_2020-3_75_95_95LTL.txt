@@ -1,0 +1,16 @@
+((permitsubmittedbyemployee||<F>permitsubmittedbyemployee) => <F>starttrip)
+(endtrip => !(<F>starttrip)) && <G>(endtrip => !(<F>starttrip))
+(starttrip => !(<X>permitsubmittedbyemployee)) && <G>(starttrip => !(<X>permitsubmittedbyemployee))
+permitsubmittedbyemployee || <F>permitsubmittedbyemployee
+(permitsubmittedbyemployee => !(<X>starttrip)) && <G>(permitsubmittedbyemployee => !(<X>starttrip))
+starttrip || <F>starttrip
+((endtrip||<F>endtrip) => <F>permitsubmittedbyemployee)
+((permitsubmittedbyemployee||<F>permitsubmittedbyemployee) => <F>endtrip)
+(starttrip => <X>((!starttrip) <U>endtrip)) && <G>(starttrip => <X>((!starttrip) <U>endtrip))
+<G>((!endtrip) || <X>(<G>(!endtrip)))
+<G>((!permitsubmittedbyemployee) || <X>(<G>(!permitsubmittedbyemployee)))
+<G>((!starttrip) || <X>(<G>(!starttrip)))
+(<F>(endtrip) => <F>starttrip) && (<F>(starttrip) => <F>endtrip)
+((starttrip||<F>starttrip) => <F>permitsubmittedbyemployee)
+endtrip || <F>endtrip
+(permitsubmittedbyemployee => !(<X>endtrip)) && <G>(permitsubmittedbyemployee => !(<X>endtrip))

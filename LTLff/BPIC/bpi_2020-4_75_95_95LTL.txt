@@ -1,0 +1,10 @@
+(<F>(paymenthandled) => ((!paymenthandled) <U> requestforpaymentsubmittedbyemployee)) && (<G>(paymenthandled => <X>(<F>paymenthandled => ((!paymenthandled) <U> requestforpaymentsubmittedbyemployee))))
+(requestpayment => !(<F>requestforpaymentsubmittedbyemployee)) && <G>(requestpayment => !(<F>requestforpaymentsubmittedbyemployee))
+(requestforpaymentsubmittedbyemployee => !(<X>paymenthandled)) && <G>(requestforpaymentsubmittedbyemployee => !(<X>paymenthandled))
+(paymenthandled => !(<F>requestforpaymentsubmittedbyemployee)) && <G>(paymenthandled => !(<F>requestforpaymentsubmittedbyemployee))
+(requestforpaymentfinalapprovedbysupervisor => !(<F>requestforpaymentsubmittedbyemployee)) && <G>(requestforpaymentfinalapprovedbysupervisor => !(<F>requestforpaymentsubmittedbyemployee))
+requestforpaymentsubmittedbyemployee || <F>requestforpaymentsubmittedbyemployee
+(<F>(requestforpaymentfinalapprovedbysupervisor) => ((!requestforpaymentfinalapprovedbysupervisor) <U> requestforpaymentsubmittedbyemployee)) && (<G>(requestforpaymentfinalapprovedbysupervisor => <X>(<F>requestforpaymentfinalapprovedbysupervisor => ((!requestforpaymentfinalapprovedbysupervisor) <U> requestforpaymentsubmittedbyemployee))))
+(<F>(requestpayment) => ((!requestpayment) <U> requestforpaymentsubmittedbyemployee)) && (<G>(requestpayment => <X>(<F>requestpayment => ((!requestpayment) <U> requestforpaymentsubmittedbyemployee))))
+(requestforpaymentsubmittedbyemployee => !(<X>requestpayment)) && <G>(requestforpaymentsubmittedbyemployee => !(<X>requestpayment))
+<G>(!requestforpaymentsubmittedbyemployee)

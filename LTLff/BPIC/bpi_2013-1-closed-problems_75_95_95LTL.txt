@@ -1,0 +1,7 @@
+(<F>(completed) => ((!completed) <U> accepted)) && (<G>(completed => <X>(<F>completed => ((!completed) <U> accepted))))
+((completed && !(<F>completed)) || <G>(completed => !(<F>completed)))
+<G>(!completed=> <F>(completed))
+(completed => !(<X>accepted)) && <G>(completed => !(<X>accepted))
+(completed => !(<X>queued)) && <G>(completed => !(<X>queued))
+(queued => !(<X>completed)) && <G>(queued => !(<X>completed))
+accepted || <F>accepted

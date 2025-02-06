@@ -1,0 +1,15 @@
+declarationsubmittedbyemployee || <F>declarationsubmittedbyemployee
+(declarationsubmittedbyemployee => !(<X>endtrip)) && <G>(declarationsubmittedbyemployee => !(<X>endtrip))
+((declarationsubmittedbyemployee||<F>declarationsubmittedbyemployee) => <F>starttrip)
+(endtrip => !(<F>starttrip)) && <G>(endtrip => !(<F>starttrip))
+((declarationsubmittedbyemployee||<F>declarationsubmittedbyemployee) => <F>endtrip)
+((endtrip||<F>endtrip) => <F>declarationsubmittedbyemployee)
+(starttrip => !(<X>declarationsubmittedbyemployee)) && <G>(starttrip => !(<X>declarationsubmittedbyemployee))
+starttrip || <F>starttrip
+<G>((!endtrip) || <X>(<G>(!endtrip)))
+(declarationsubmittedbyemployee => !(<X>starttrip)) && <G>(declarationsubmittedbyemployee => !(<X>starttrip))
+(starttrip => <X>((!starttrip) <U>endtrip)) && <G>(starttrip => <X>((!starttrip) <U>endtrip))
+((starttrip||<F>starttrip) => <F>declarationsubmittedbyemployee)
+<G>((!starttrip) || <X>(<G>(!starttrip)))
+(<F>(endtrip) => <F>starttrip) && (<F>(starttrip) => <F>endtrip)
+endtrip || <F>endtrip
